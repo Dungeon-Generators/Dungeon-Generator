@@ -202,7 +202,7 @@ class dungeon_generator:
     # create an unsatisfied edge
     todo = [(pos, angle, feature_name, False)]
     num_tiles = 0
-    random.seed(1)
+    random.seed() #made it random eliminating argument
 
     # this loop processes one edge from the todo list.
     while len(todo) and num_tiles < 200:
