@@ -53,7 +53,7 @@ class dungeon_generator:
 
   def read_components(self):
     importer = fbx.FbxImporter.Create(self.sdk_manager, "")    
-    result = importer.Initialize("scenes/components.fbx", -1, self.io_settings)
+    result = importer.Initialize("scenes/components2.fbx", -1, self.io_settings)
     if not result:
       raise BaseException("could not find components file")
     self.components = fbx.FbxScene.Create(self.sdk_manager, "")
