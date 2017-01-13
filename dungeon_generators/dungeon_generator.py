@@ -40,7 +40,6 @@ def lim360(x):
   x = x + 360 if x < 0 else x
   x = x - 360 if x >= 360 else x
   return round(x)
-  
 
 class dungeon_generator:
   def __init__(self):  
@@ -185,6 +184,8 @@ class dungeon_generator:
     print("pass")
     return True
 
+  #def create_room(self, new_scene, feature_name):
+
 
   def create_dungeon(self, new_scene, feature_name):
     # clone the tile meshes and name them after their original nodes.
@@ -205,7 +206,7 @@ class dungeon_generator:
     random.seed()
 
     # this loop processes one edge from the todo list.
-    while len(todo) and num_tiles < 500:
+    while len(todo) and num_tiles < 100:
       pos, angle, out_feature_name, in_feature_name = todo.pop()
 
       print(xy_location(pos))
