@@ -53,7 +53,7 @@ class dungeon_generator:
 
   def read_components(self):
     importer = fbx.FbxImporter.Create(self.sdk_manager, "")    
-    result = importer.Initialize("scenes/components2.fbx", -1, self.io_settings)
+    result = importer.Initialize("scenes/components.fbx", -1, self.io_settings)
     if not result:
       raise BaseException("could not find components file")
     self.components = fbx.FbxScene.Create(self.sdk_manager, "")
@@ -205,7 +205,7 @@ class dungeon_generator:
     random.seed()
 
     # this loop processes one edge from the todo list.
-    while len(todo) and num_tiles < 200:
+    while len(todo) and num_tiles < 500:
       pos, angle, out_feature_name, in_feature_name = todo.pop()
 
       print(xy_location(pos))
