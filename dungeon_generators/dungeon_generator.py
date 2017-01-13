@@ -205,7 +205,7 @@ class dungeon_generator:
     random.seed()
 
     # this loop processes one edge from the todo list.
-    while len(todo) and num_tiles < 50:
+    while len(todo) and num_tiles < 500:
       pos, angle, out_feature_name, in_feature_name = todo.pop()
 
       print(xy_location(pos))
