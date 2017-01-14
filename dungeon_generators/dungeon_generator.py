@@ -222,6 +222,6 @@ class dungeon_generator:
       num_tiles += 1
 
 
-fbxfile = "scenes/result.fbx"
-openPath = r'"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"'
-subprocess.Popen("%s %s" % (openPath, fbxfile))
+#fbxfile = "scenes/result.fbx"
+#openPath = r'"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"'
+#subprocess.Popen("%s %s" % (openPath, fbxfile))
