@@ -2,10 +2,10 @@
 import re
 import math
 import random
-
-# if (when) this doesn't work, copy 64 bit Python 3.3 fbx.pyd and fbxsip.pyd from the Autodesk FBX SDK
-# into this directory
+from fbx import *
 import fbx
+import subprocess
+
 
 # FbxDouble3 unpacker
 def tolist(x):
@@ -120,8 +120,9 @@ class dungeon_generator:
   def write_result(self):
     #format = self.get_format("FBX binary")
     format = self.get_format("FBX ascii")
+    
 
-    new_scene = fbx.FbxScene.Create(self.sdk_manager, "result");
+    new_scene = fbx.FbxScene.Create(self.sdk_manager, "result")
     self.create_dungeon(new_scene, "flat")
 
     exporter = fbx.FbxExporter.Create(self.sdk_manager, "")
@@ -219,3 +220,8 @@ class dungeon_generator:
           break
 
       num_tiles += 1
+
+
+#fbxfile = "scenes/result.fbx"
+#openPath = r'"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"'
+#subprocess.Popen("%s %s" % (openPath, fbxfile))
